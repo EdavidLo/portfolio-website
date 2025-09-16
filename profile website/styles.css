@@ -1,0 +1,205 @@
+/* RESET  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
+  background: #111827;
+  color: #f9fafb;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* NAVIGATION */
+header nav ul {
+  display: flex;
+  gap: 1.25rem;
+  justify-content: center;
+  padding: 1rem 0;
+  list-style: none;
+  letter-spacing: 1.4px;
+  font-weight: 700;
+}
+
+header nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  display: inline-block;
+  transition: color 0.2s ease, font-size 0.2s ease;
+  cursor: pointer;
+}
+
+header nav a:hover {
+  color: #9ca3af; /* gray-400 */
+  font-size: 1.1rem;
+}
+
+/* HERO */
+#hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: url(img/hero.jpg) center/cover no-repeat;
+  position: relative;
+  margin-bottom: 80px;
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(42, 42, 52, 0.3);
+  z-index: 0;
+}
+
+#hero h1 {
+  font-size: 135.2px;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2.2px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+#hero p {
+  font-size: 22px;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2.2px;
+  max-width: 600px;
+  z-index: 1;
+}
+
+/* SECTION HEADINGS + PARAGRAPHS */
+section h2 {
+  font-size: 4.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2.2px;
+  font-weight: 500;
+  margin-top: 0;
+}
+
+section p {
+  font-size: 25px;
+  line-height: 1.75;
+  letter-spacing: 0.2px;
+  color: #d1d5db;
+}
+
+/* SHARED SPLIT LAYOUT */
+.split {
+  display: flex;
+  width: 100%;
+  min-height: 400px;
+  margin-bottom: 2rem;
+}
+
+.split > div {
+  flex: 1;
+  padding: 1rem;
+  font-size: 1.125rem;
+  line-height: 1.75;
+  letter-spacing: 0.2px;
+  color: #d1d5db;
+  border-bottom: 3px solid #374151; /* default */
+}
+
+/* Section accents */
+#about > div {
+  border-bottom-color: #631260;
+}
+#education > div {
+  border-bottom-color: #facc15;
+}
+#experience > div {
+  border-bottom-color: #631260;
+}
+#skills > div {
+  border-bottom-color: #facc15;
+}
+
+/* About Me icons */
+#about img {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+}
+
+#about .about-right p span {
+  color: #facc15;
+  font-weight: 600;
+}
+
+/* PROJECTS SECTION */
+#projects {
+  width: 100%;
+  min-height: 400px;
+  margin-bottom: 50px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+#projects .card-box {
+  background: #0f172a;
+  border: 1px solid #1f2937;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+#projects .card-box:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+#projects .card-box img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+#projects .card-box:hover img {
+  transform: scale(1.05);
+}
+
+#projects .card-box h3 {
+  padding: 0.75rem 1rem 1rem;
+  font-size: 1.125rem;
+  color: #e5e7eb;
+  transition: color 0.3s ease;
+}
+
+#projects .card-box:hover h3 {
+  color: #facc15;
+}
